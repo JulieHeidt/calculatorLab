@@ -1,6 +1,18 @@
 
 var turn=0;
-var squareA
+var squares = $(".square"); console.log(squares);
+//calling all the values within .square (class)-->console log them
+var arr =	[
+			[0, 1, 2],
+			[3, 4, 5], 
+			[6, 7, 8], 
+			[0, 3, 6], 
+			[1, 4, 7], 
+			[2, 5, 8], 
+			[0, 4, 8], 
+			[2, 4, 6]
+			]	
+
 $(".square").on("click", function(){
 	if($(this).text() !== ""){
 		alert("Choose another box!");
@@ -18,4 +30,10 @@ $("#reset").on("click", function(){
 	$(".square").empty();
 });
 
-wins: [ [ 0, 1, 2 ], [ 3, 4, 5 ], [ 6, 7, 8 ], [ 0, 3, 6 ], [ 1, 4, 7 ], [ 2, 5, 8 ], [ 0, 4, 8 ], [ 2, 4, 6 ] ]
+function checkForWinner(){
+ $.each( arr, function(){
+ 	if(squares[this[0]]===player && squares[this[1]]===player && squares[this[2]]===player);
+ 	alert("There is a winner!");
+});
+}
+
