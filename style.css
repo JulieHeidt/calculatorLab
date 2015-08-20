@@ -33,7 +33,15 @@ body{
     cursor: pointer;
 
 }
+.clickedX {
+   background: red;
+   border-style: ridge;
+}
 
+.clickedY {
+   background: blue;
+   border-style: ridge;
+}
 
 button {
    background: #25B758;

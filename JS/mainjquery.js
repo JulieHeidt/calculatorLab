@@ -1,4 +1,3 @@
-
 var turn=0;
 var squares = $(".square");
 console.log(squares);
@@ -21,9 +20,11 @@ $(".square").on("click", function(){
 	} else {	
 		if (turn===1) {
 			$(this).html("X");
+			$(this).addClass("clickedX");
 			player="X";
 		} else {
 			$(this).html("O");
+			$(this).addClass("clickedY")
 			player="O";
 		}
 		turn=turn===0?1:0;
